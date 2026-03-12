@@ -1,0 +1,70 @@
+.contactListHeaderContainer{
+    width: 100%;
+}
+
+.contact-banner{
+    background-color: #eee;
+     background-image: url('../../assets/images/blog-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 150px 50px;
+
+}
+
+.contact-container{
+ padding: 10px;
+ width: 100%;
+ border: 2px solid #e4e4e4;
+}
+.contact-hero-content{
+   padding-left: 30px;
+}
+.contact-hero-content h1{
+        font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.contact-category-btns{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* Medium Screen Responsive */
+@media (max-width: 768px) {
+
+  .contactListHeaderContainer {
+    padding: 8px;
+    border-width: 1px;
+  }
+
+  .contact-banner {
+    padding: 80px 20px; /* height aur padding reduce kiya */
+    background-size: cover;
+  }
+
+  .contact-hero-content {
+    padding-left: 15px; /* left padding kam ki */
+  }
+
+  .contact-hero-content h1 {
+    font-size: 36px; /* font size kam kiya for small screens */
+    line-height: 1.2;
+  }
+
+  .contact-category-btns {
+    flex-direction: column; /* buttons stack ho jaye vertically */
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+ 
+
+  .contact-container {
+    padding: 8px;
+    border-width: 1px;
+  }
+}

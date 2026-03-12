@@ -1,0 +1,217 @@
+header {
+    width: 100%;
+    background-color: #ffffff; /* White background like image */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 80px;
+    width: 1300px;
+    margin: auto;
+}
+.active-nav{
+    color: #e63946 !important;
+}
+.logo-menu-side{
+    display: flex;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header nav img {
+    width: 100px; /* Logo size same as code */
+    cursor: pointer;
+}
+.logo-img{
+    width: 100px;
+}
+/* Menu Links */
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+    width: 1170px;
+}
+header nav ul li{
+    padding: 0 12px;
+    position: relative;
+}
+header nav ul li a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #000000; /* Black text */
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #e63946; /* Slight red hover like image */
+}
+
+/* Navbar Icons Side */
+.navbar-icons-side {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* subtle light background */
+    padding: 8px 12px;
+    border-radius: 12px;
+    gap: 8px;
+    max-width: 400px; /* optional, responsive ke liye */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #333;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+    font-weight: 400;
+    font-family: "Jost" , sans-serif;
+}
+
+.search-bar input:focus {
+    border: none;
+    outline: none;
+}
+
+/* Login Icon */
+.loggin-icon a {
+    color: #000000;
+    font-size: 20px;
+}
+
+/* Cart Icon */
+.cart-icon {
+    position: relative;
+}
+
+.cart-shopper a {
+    color: #000000;
+    font-size: 20px;
+}
+
+.cart-shopper span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #007bff; /* Blue like image */
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Wishlist Icon */
+.wishlist-icons .wishlist {
+    position: relative;
+}
+
+.wishlist-icons a {
+    color: #000000;
+    font-size: 20px;
+}
+
+.wishlist-icons span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #007bff; /* Blue like image */
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+.toggle-icon{
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+.close-toggle{
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: none;
+    z-index: 9999;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .toggle-icon{
+    display: block;
+ }   
+ header nav{
+    width: 100%;
+ }
+ .search-bar{
+    width: 90%;
+ }
+ .close-toggle{
+    display: block;
+ }
+ header nav ul{
+    transition: 0.6s;
+    position: absolute;
+    left: -100%;
+    top: 80px;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: white;
+ }
+ /* When menu open */
+header nav ul.open-menu {
+    left: 0;
+}
+ header nav ul li{
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+header nav ul li a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #000000; /* Black text */
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+.navbar-icons-side{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-left: 30px;
+}
+}
+
+@media (max-width: 768px) {
+ 
+}

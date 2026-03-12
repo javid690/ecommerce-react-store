@@ -1,0 +1,32 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40px);
+    z-index: 999;
+    opacity: 0;
+    animation: slideDown 0.4s ease forwards;
+}
+
+.msg-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #07bc0c;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 5px;
+}
+
+/* 🔥 animation */
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}

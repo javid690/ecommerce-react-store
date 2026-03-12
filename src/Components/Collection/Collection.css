@@ -1,0 +1,142 @@
+.collection-section{
+  padding: 80px 0;
+}
+
+.collections-container{
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 0 30px;
+}
+
+/* COMMON CARD */
+.collection-card{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  min-height: 280px;
+}
+
+.collection-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: 0.6s;
+}
+
+.collection-card:hover::before{
+  transform: scale(1.08);
+}
+
+.collection-content{
+  position: relative;
+  z-index: 2;
+}
+
+.collection-content span{
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.collection-content h2{
+  font-size: 26px;
+  margin: 8px 0 12px;
+  font-weight: 600;
+}
+
+.collection-content p{
+  font-size: 14px;
+  max-width: 220px;
+  margin-bottom: 10px;
+}
+
+.collection-content a{
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+
+/* LEFT */
+.women{
+  background: #e5e2de;
+  min-height: 500px;
+}
+.women::before{
+  background-image: url("../../assets/images/collection1.jpg");
+  background-position: right center;
+}
+
+/* RIGHT SIDE */
+.rightSide-collection{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* MEN */
+.men{
+  background: #eff0f2;
+}
+.men::before{
+  background-image: url("../../assets/images/collection2.jpg");
+  background-position: right center;
+}
+
+/* BOTTOM ROW */
+.bottom-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* KIDS */
+.kids{
+  background: #e5e2dd;
+}
+.kids::before{
+  background-image: url("../../assets/images/collection3.jpg");
+  background-position: right center;
+}
+
+/* GIFT */
+.gift{
+  background: #f4e5e0;
+}
+.gift::before{
+  background: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px){
+  .collections-container{
+    grid-template-columns: 1fr;
+  }
+
+  .women{
+    min-height: 400px;
+  }
+}
+
+@media(max-width: 600px){
+  .collection-card{
+    min-height: 240px;
+    padding: 25px;
+  }
+
+  .bottom-row{
+    grid-template-columns: 1fr;
+  }
+
+  .collection-content h2{
+    font-size: 20px;
+  }
+}

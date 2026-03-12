@@ -1,0 +1,148 @@
+.review-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Jost', sans-serif;
+  color: #333;
+}
+
+.review-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  display: flex;
+  align-items: flex-start; /* Align items to top-left */
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Left align */
+  font-size: 14px;
+  margin-bottom: 5px;
+  gap: 10px;
+}
+
+.review-date {
+  color: #777;
+  font-size: 12px;
+}
+
+.review-stars {
+  color: #ffb400;
+  font-size: 14px;
+}
+
+.review-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.review-item hr {
+  margin-top: 10px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.review-form {
+  margin-top: 30px;
+}
+
+.review-form h5 {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.review-form .form-group {
+  margin-bottom: 15px;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+}
+
+.review-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.review-form label {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Jost', sans-serif;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Jost', sans-serif;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .review-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .review-avatar {
+    margin-bottom: 10px;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-container {
+    padding: 0 10px;
+  }
+
+  .review-item p {
+    font-size: 13px;
+  }
+
+  .review-header {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}

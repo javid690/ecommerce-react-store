@@ -1,0 +1,132 @@
+.sale-section {
+    width: 100%;
+    min-height: 500px; /* adjust as needed */
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url('../../assets/images/sale-banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 110px !important;
+}
+
+.sale-content-wrapper {
+    /* max-width: 600px; */
+    margin: auto;
+    width: 1100px;
+}
+
+.sale-content h4 {
+    color: #d32f2f; /* red color like image */
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.sale-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.sale-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+    padding-bottom: 3px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sale-content a:hover {
+    color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.time-box h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.time-box p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #777;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.colon {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 5px;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sale-title {
+        font-size: 48px;
+    }
+    .time-box h2 {
+        font-size: 28px;
+    }
+    .colon {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sale-section {
+        padding: 40px 15px;
+        justify-content: center;
+        text-align: center;
+    }
+    .sale-title {
+        font-size: 36px;
+    }
+    .time-box h2 {
+        font-size: 24px;
+    }
+    .colon {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sale-title {
+        font-size: 28px;
+    }
+    .time-box h2 {
+        font-size: 20px;
+    }
+    .colon {
+        font-size: 20px;
+    }
+}

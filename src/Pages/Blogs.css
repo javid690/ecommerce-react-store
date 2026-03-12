@@ -1,0 +1,193 @@
+/* =========================
+POST CONTAINER
+========================= */
+
+.post-container{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+
+/* =========================
+POST CARD
+========================= */
+
+.post-card{
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.35s ease;
+}
+
+.post-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+POST IMAGE
+========================= */
+
+.post-img{
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.post-card:hover .post-img img{
+    transform: scale(1.08);
+}
+
+
+/* =========================
+POST CONTENT
+========================= */
+
+.post-content{
+    padding: 25px 22px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* user + date */
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* title */
+
+.post-content h3{
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111;
+}
+
+
+/* description */
+
+.post-content p{
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* button */
+
+.post-content button{
+    margin-top: 10px;
+    align-self: flex-start;
+
+    padding: 10px 20px;
+    border-radius: 6px;
+
+    border: none;
+    background: #111;
+    color: #fff;
+
+    font-size: 14px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.post-content button:hover{
+    background: #333;
+}
+
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width: 992px){
+
+    .post-container{
+        gap: 25px;
+        padding: 35px 18px;
+    }
+
+    .post-img{
+        height: 220px;
+    }
+
+    .post-content h3{
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    .post-container{
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 15px;
+    }
+
+    .post-img{
+        height: 200px;
+    }
+
+    .post-content{
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media (max-width: 480px){
+.post-container{
+        grid-template-columns:  1fr;
+        padding: 30px 15px;
+    }
+    .post-img{
+        height: 180px;
+    }
+
+    .post-content h3{
+        font-size: 18px;
+    }
+
+    .post-content p{
+        font-size: 14px;
+    }
+
+}

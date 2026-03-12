@@ -1,0 +1,73 @@
+/* Partner Slider Styles */
+.company-partners {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.company-partners h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Slider container */
+.partners-logos {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 10px 0;
+  cursor: grab;
+}
+
+/* Hide scrollbar for modern look */
+.partners-logos::-webkit-scrollbar {
+  display: none;
+}
+.partners-logos {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Individual logo card */
+.logo {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.logo img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .logo {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 100px;
+    height: 70px;
+  }
+}

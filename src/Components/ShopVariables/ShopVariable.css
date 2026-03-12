@@ -1,0 +1,399 @@
+
+.shop-container{
+    width: 1300px;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    margin:  auto !important;
+    padding: 0 50px;
+}
+
+
+.category-side-container{
+    width: 25%;
+  padding: 40px 0;
+
+}
+.varibles-head{
+  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+}
+.varibles-head h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.collapse{
+    font-size: 27px;
+    color: gray;
+    cursor: pointer;
+}
+
+.category-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 6px;
+
+}
+.category-btns button{
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+
+/* colors variables */
+.color-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 290px;
+  /* row-gap: 20px; */
+  padding: 5px;
+  /* margin-top: 10px; */
+}
+
+.color-btn {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  /* border: 2px solid #ddd; */
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+  border: 2px solid #333;
+}
+
+/* size-btns */
+.size-btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 6px;
+}
+.size-btns button{
+    background-color: transparent;
+    border: none;
+    border: 0.1px solid #ddd;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+.size-btns button:hover{
+    background-color: #d3d3d3;
+    transition: 0.3s;
+}
+
+
+/* brands */
+.brands-btns-container {
+  /* width: 300px; */
+  padding: 6px;
+  font-family: 'Jost' , sans-serif;
+  color: #333;
+}
+
+/* Search Box Style */
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #888;
+  width: 100%;
+  font-family: 'Jost' , sans-serif;
+}
+
+/* Individual Brand Item */
+.brand-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.brand-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Checkbox Styling */
+.brand-left input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.brand-left label {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Right side Number */
+.brand-count {
+  color: #999;
+  font-size: 14px;
+}
+
+
+/* prices */
+.price-filtered {
+    padding: 6px;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 20px;
+}
+
+/* Gray Static Line */
+.base-track {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #d1d1d1;
+  z-index: 1;
+}
+
+/* Black Dynamic Line */
+.active-track {
+  position: absolute;
+  height: 4px;
+  background-color: #000;
+  z-index: 2;
+  top: 1px; /* Center it on the gray line */
+}
+
+/* Hidden range inputs but visible thumbs */
+.thumb {
+  position: absolute;
+  width: 100%;
+  pointer-events: none; /* Allows clicking through to the other thumb */
+  appearance: none;
+  background: none;
+  z-index: 3;
+  top: -6px;
+}
+
+/* Custom Thumbs (Circles) */
+.thumb::-webkit-slider-thumb {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  pointer-events: auto; /* Re-enables clicking on the circle */
+  cursor: pointer;
+}
+
+/* Price Labels Style */
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Jost' , sans-serif;
+  color: #888;
+  font-size: 14px;
+}
+
+.price-labels strong {
+  color: #333;
+}
+
+
+
+/* collapse */
+
+.category-btns {
+  max-height: 500px;
+  overflow: visible;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 1;
+}
+
+.category-btns.show {
+  max-height: 0; /* adjust based on content */
+  opacity: 0;
+}
+
+.collapse {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.collapse .rotate {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease;
+}
+
+
+/* color */
+
+.color-btns {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.color-btns.show {
+  max-height: 500px; /* adjust based on content */
+  opacity: 1;
+}
+
+.collapse {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.collapse .rotate {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease;
+}
+
+
+/* size-btns */
+.size-btns {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.size-btns.show {
+  max-height: 500px; /* adjust based on content */
+  opacity: 1;
+}
+
+/* brands */
+.brands-btns-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.brands-btns-container.show {
+  max-height: 500px; /* adjust based on content */
+  opacity: 1;
+}
+
+/* price-filtered */
+
+
+.price-filtered {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.price-filtered.show {
+  max-height: 500px; /* adjust based on content */
+  opacity: 1;
+}
+
+
+/* ===== Media Queries ===== */
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+  .shop-container {
+    flex-direction: column;
+    padding: 0 30px;
+    width: 100%;
+  }
+
+  .category-side-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .size-btns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .color-btns {
+    width: 100%;
+    gap: 15px;
+  }
+}
+
+/* Small screens (Large mobiles) */
+@media (max-width: 768px) {
+  .shop-container {
+    padding: 0 20px;
+  }
+
+  .size-btns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .color-btns {
+    gap: 10px;
+  }
+
+  .varibles-head h4 {
+    font-size: 14px;
+  }
+
+  .collapse {
+    font-size: 22px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+}
+
+/* Extra small screens (Mobiles) */
+@media (max-width: 480px) {
+  .size-btns {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .color-btns {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .varibles-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .collapse {
+    font-size: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

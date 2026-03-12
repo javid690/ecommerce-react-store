@@ -1,0 +1,122 @@
+
+.confirmation-container {
+    font-family: 'Jost', sans-serif;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header Styling */
+.confirmation-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.confirmation-head img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.confirmation-head h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.confirmation-head p {
+    color: #777;
+    font-size: 16px;
+}
+
+/* Order Summary Bar (Dotted Border) */
+.order-summary-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1.5px dashed #ccc;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.summary-item span {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.summary-item strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.border-left {
+    border-left: 1px solid #eee;
+}
+
+/* Order Details Table */
+.order-details-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.details-table {
+    border: 1px solid #eee;
+}
+
+.table-header, .table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-header {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.table-row span, .table-row strong {
+    font-size: 15px;
+}
+
+.total-row {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+.total-row strong {
+    font-size: 18px;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    .order-summary-bar {
+        grid-template-columns: 1fr 1fr; /* 2 items per row on tablets */
+        gap: 20px;
+    }
+    
+    .border-left {
+        border-left: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-summary-bar {
+        grid-template-columns: 1fr; /* 1 item per row on mobile */
+        text-align: center;
+    }
+    
+    .confirmation-head h3 {
+        font-size: 22px;
+    }
+}

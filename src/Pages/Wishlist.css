@@ -1,0 +1,129 @@
+.wishlist-hero-section {
+  max-width: 1100px; /* ✅ as you asked */
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.wishlist-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Jost', sans-serif;
+}
+
+.wishlist-top-bar {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  font-family: 'Jost', sans-serif;
+}
+
+.wishlist-tabs button {
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.wishlist-tabs p {
+  color: #888;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: 'Jost', sans-serif;
+}
+
+/* 🔥 table container */
+.wishlist-products-container {
+  width: 100%;
+}
+
+/* header */
+.wishlist-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 12px 10px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  color: #555;
+}
+
+/* rows */
+.wishlist-product-detail {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 18px 10px;
+  border-bottom: 1px solid #eee;
+  gap: 10px;
+}
+
+/* product left */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.remove-wishlist{
+  cursor: pointer;
+
+}
+.remove-wishlist:hover{
+  color: red;
+}
+.product-info img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px !important;
+}
+
+.stock {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* button */
+.cart-btn {
+  background: black;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background:black;
+
+}
+.wishlist-product-name{
+    font-family: "Jost" , sans-serif;
+    text-transform: capitalize;
+}
+
+/*  responsive */
+@media (max-width: 768px) {
+  .wishlist-header {
+    display: none;
+  }
+
+  .wishlist-product-detail {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  .cart-btn {
+    width: 100%;
+  }
+}

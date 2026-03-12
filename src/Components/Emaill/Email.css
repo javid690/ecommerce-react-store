@@ -1,0 +1,155 @@
+.email-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.4s ease forwards; /* fade in overlay */
+}
+
+.email-box {
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform: translateY(-100px); /* start above */
+  opacity: 0; /* invisible at start */
+  animation: slideDown 0.5s ease forwards; /* slide down animation */
+}
+
+/* Close Button */
+.close-email-box {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  color: #333;
+}
+
+/* Box Content */
+.box-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Image Side */
+.email-img-side {
+  flex: 1 1 50%;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.email-img-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Side */
+.email-text-side {
+  flex: 1 1 50%;
+  min-width: 300px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.email-text-side h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.email-text-side p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Input & Button */
+.email-input {
+  display: flex;
+  gap: 10px;
+}
+
+.email-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.email-input input::placeholder{
+  font-size: 15px; 
+  font-family: 'Jost' , sans-serif;
+}
+
+.email-input input:focus {
+  border-color: #333;
+}
+
+.email-input button {
+  padding: 12px 25px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.email-input button:hover {
+  background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box-content {
+    flex-direction: column;
+  }
+
+  .email-img-side,
+  .email-text-side {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .email-text-side {
+    padding: 30px 20px;
+  }
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

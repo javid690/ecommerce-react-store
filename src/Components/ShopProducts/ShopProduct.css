@@ -1,0 +1,158 @@
+.shop-products {
+  width: 75%;
+  padding: 40px 0;
+}
+
+.shop-products-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+}
+
+/* TopBar.css */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 12px 20px; */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #111;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.bread-crumb {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.bread-crumb a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.bread-crumb span {
+  margin: 0 5px;
+  color: #888;
+}
+
+.rating select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+/* pagenation-container */
+.pagenation-container{
+  margin: 20px;
+}
+.pagenation-btns{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prev , .next{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+ .n-btn{
+   text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+ }
+.number-btn{
+  display: flex;
+  gap: 25px;
+}
+.active{
+  color: red;
+}
+/* ===== Media Queries for Shop Products ===== */
+
+/* Medium screens (Tablets) */
+@media (max-width: 1024px) {
+  .shop-products {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .shop-products-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .bread-crumb {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .rating select {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
+/* Small screens (Large mobiles) */
+@media (max-width: 768px) {
+  .shop-products-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .product-img img{
+    height: 400px;
+  }
+
+  .top-bar {
+    font-size: 13px;
+  }
+
+  .rating select {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* Extra small screens (Mobiles) */
+@media (max-width: 480px) {
+   .shop-products-container {
+    grid-template-columns:  1fr;
+    gap: 10px;
+  }
+  .top-bar {
+    font-size: 12px;
+  }
+
+  .bread-crumb a {
+    font-size: 11px;
+  }
+
+  .rating select {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+}

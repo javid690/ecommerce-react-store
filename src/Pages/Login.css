@@ -1,0 +1,22 @@
+.logins-tabs{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.logins-tabs button {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.active{
+    border-bottom: 2px solid #000 !important;
+}
