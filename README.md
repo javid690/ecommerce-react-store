@@ -1,16 +1,28 @@
-# React + Vite
+# 🛒 Pro-Cart E-commerce (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich e-commerce store built with **React** and **Context API** for seamless state management. 🚀
 
-Currently, two official plugins are available:
+## ✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **📦 Product Management:** Browse products with dynamic filtering.
+- **🛒 Shopping Cart:** Add, remove, and update quantities in real-time.
+- **❤️ Wishlist:** Save your favorite items for later.
+- **💳 Checkout Flow:** Integrated checkout logic with form validation.
+- **📱 Responsive:** Fully optimized for all screen sizes.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Library:** React.js ⚛️
+- **State Management:** Context API & useReducer 🧠
+- **Styling:** Tailwind CSS 🌊
+- **Icons:** React Icons
 
-## Expanding the ESLint configuration
+## 📸 Project Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Main View](./screenshots/cart1.png)
+![Cart & Wishlist](./screenshots/cart2.png)
+![Cart & Wishlist](./screenshots/cart3.png)
+
+## 💡 Technical Insight
+
+Used **Context API** to avoid prop-drilling, making the cart state accessible globally. This ensures a smooth sync between the product list, wishlist, and cart.
